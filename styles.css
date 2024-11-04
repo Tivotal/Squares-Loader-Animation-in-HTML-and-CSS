@@ -1,0 +1,75 @@
+/* Created by Tivotal */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.loader,
+.loader span {
+  width: 150px;
+  height: 150px;
+  background: red;
+  position: absolute;
+  border: 5px solid #fff;
+  border-radius: 10px;
+  mix-blend-mode: screen;
+}
+
+.loader span:nth-child(1) {
+  top: 80px;
+  left: 80px;
+  background: blue;
+}
+
+.loader span:nth-child(2) {
+  top: -80px;
+  left: 80px;
+  background: pink;
+}
+
+.loader span:nth-child(3) {
+  top: 80px;
+  left: -80px;
+  background: purple;
+}
+
+.loader span:nth-child(4) {
+  top: -80px;
+  left: -80px;
+  background: green;
+}
+
+.loader {
+  animation: anim1 2s linear infinite;
+}
+
+@keyframes anim1 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.loader span {
+  animation: anim2 4s linear infinite;
+}
+
+@keyframes anim2 {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(0.6);
+  }
+  50% {
+    transform: rotate(-180deg) scale(1);
+  }
+}
